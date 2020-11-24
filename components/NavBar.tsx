@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Stack } from "@chakra-ui/react";
+import { Button, Container, Stack, useTheme } from "@chakra-ui/react";
 import { FiFileText } from 'react-icons/fi';
 
 type NavBarProps = {}
@@ -41,26 +41,30 @@ export const NavLink: React.FC<NavLinkProps> = ({ children, target, ...props }) 
 }
 
 const NavBar: React.FC<NavBarProps> = () => {
+  const theme = useTheme();
+
   return (
-    <Stack direction='row' justify='flex-end' p={10}>
-      <Stack as='nav' align='center' direction='row' spacing={1}>
-        <NavLink target='about'>About</NavLink>
-        <NavLink target='experience'>Experience</NavLink>
-        <NavLink target='projects'>Projects</NavLink>
+    <Container maxW={theme.sizes.width}>
+      <Stack direction='row' justify='flex-end' p={10} >
+        <Stack as='nav' align='center' direction='row' spacing={1}>
+          <NavLink target='about'>About</NavLink>
+          <NavLink target='experience'>Experience</NavLink>
+          <NavLink target='projects'>Projects</NavLink>
+        </Stack>
+        <Button
+          as='a'
+          tabIndex={0}
+          size='md'
+          borderRadius='10px'
+          colorScheme='green'
+          leftIcon={<FiFileText size='1.1em' />}
+          iconSpacing={1}
+          href='/files/PatrickChan_Resume.pdf'
+        >
+          Resume
+        </Button>
       </Stack>
-      <Button
-        as='a'
-        tabIndex={0}
-        size='md'
-        borderRadius='10px'
-        colorScheme='green'
-        leftIcon={<FiFileText size='1.1em' />}
-        iconSpacing={1}
-        href='/files/PatrickChan_Resume.pdf'
-      >
-        Resume
-      </Button>
-    </Stack>
+    </Container>
   );
 }
 
