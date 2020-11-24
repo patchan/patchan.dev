@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Heading, Spacer, Stack, Tag, Text, useTheme } from '@chakra-ui/react'
+import { Button, Heading, Spacer, Stack, Tag, Text } from '@chakra-ui/react'
 import { IoLogoGithub } from 'react-icons/io';
 
 type ProjectProps = {
@@ -10,8 +10,6 @@ type ProjectProps = {
 }
 
 const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => {
-  const theme = useTheme();
-
   return (
     <Stack w='100%'>
       <Stack direction='row' align='center'>

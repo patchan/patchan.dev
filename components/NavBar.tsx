@@ -9,7 +9,7 @@ type NavLinkProps = {
   target: string;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ children, target, ...props }) => {
+export const NavLink: React.FC<NavLinkProps> = ({ children, target, ...props }) => {
   const handleInput = () => {
     const elem = document.getElementById(target);
     elem?.scrollIntoView({ behavior: 'smooth' });

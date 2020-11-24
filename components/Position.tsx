@@ -1,7 +1,7 @@
 import React from 'react'
 import { Heading, Link, Spacer, Stack, Tag, Text, useTheme } from '@chakra-ui/react'
 
-type ExperienceProps = {
+type PositionProps = {
   company: string;
   link: string;
   title: string;
@@ -9,7 +9,7 @@ type ExperienceProps = {
   tech?: string[];
 }
 
-const Experience: React.FC<ExperienceProps> = ({ company, link, title, dates, tech }) => {
+const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }) => {
   const theme = useTheme();
 
   return (
@@ -31,4 +31,4 @@ const Experience: React.FC<ExperienceProps> = ({ company, link, title, dates, te
   );
 }
 
-export default Experience;
+export default Position;
