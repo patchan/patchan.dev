@@ -18,6 +18,7 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
         <Box w={{ base: '200px', md: '200px', lg: '22%'}} h='100%' py={5}>
           <Image
             w='80%'
+            maxW='200px'
             src={profileImage}
             borderRadius='full'
             alt={name}

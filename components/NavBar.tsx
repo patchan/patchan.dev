@@ -32,6 +32,7 @@ export const NavLink: React.FC<NavLinkProps> = ({ children, target, ...props }) 
       p={3}
       variant='ghost'
       onClick={handleInput}
+      onTouchEnd={handleInput}
       onKeyDown={handleKeyInput}
       {...props}
     >

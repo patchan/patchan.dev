@@ -40,9 +40,10 @@ const IndexPage = () => {
     <>
       <Head>
         <title>{siteTitle}</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta name='description' content={siteDescription} />
+        <link rel='canonical' href='https://patchan.dev' />
       </Head>
       <NavBar />
       <PageLayout>
