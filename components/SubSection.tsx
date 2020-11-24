@@ -3,12 +3,13 @@ import React from 'react';
 
 type SubSectionProps = {
   children: React.ReactNode;
+  id?: string;
 }
 
-const SubSection: React.FC<SubSectionProps> = ({ children }) => {
+const SubSection: React.FC<SubSectionProps> = ({ children, id }) => {
 
   return (
-    <Box alignItems='center' justifyContent='center' py={20}>
+    <Box id={id} alignItems='center' justifyContent='center' pt={10} pb={20}>
       {children}
     </Box>
   );

@@ -5,16 +5,12 @@ type PageLayoutProps = {
   children?: ReactNode;
 }
 
-const PageLayout: React.FC = ({ children }: PageLayoutProps) => {
+const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
   const theme = useTheme();
 
   return (
-    <Container maxW={theme.sizes.width} minH='100vh' px={6}>
+    <Container maxW={theme.sizes.width} px={10}>
       {children}
-      {/* <Footer>
-        <hr />
-        <span>I'm here to stay (Footer)</span>
-      </Footer> */}
     </Container>
   );
 }

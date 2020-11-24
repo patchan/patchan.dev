@@ -1,15 +1,27 @@
 import React from "react";
-import { Button, Flex, Heading, Stack, useTheme } from "@chakra-ui/react";
+import { Button, Stack } from "@chakra-ui/react";
 import { FiFileText } from 'react-icons/fi';
 
 type NavBarProps = {}
 
 type NavLinkProps = {
   children: React.ReactNode;
-  href: string;
+  target: string;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ children, ...props }) => {
+const NavLink: React.FC<NavLinkProps> = ({ children, target, ...props }) => {
+  const handleInput = () => {
+    const elem = document.getElementById(target);
+    elem?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const handleKeyInput = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      const elem = document.getElementById(target);
+      elem?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <Button
       as='a'
@@ -19,6 +31,8 @@ const NavLink: React.FC<NavLinkProps> = ({ children, ...props }) => {
       borderRadius={25}
       p={3}
       variant='ghost'
+      onClick={handleInput}
+      onKeyDown={handleKeyInput}
       {...props}
     >
       {children}
@@ -27,41 +41,26 @@ const NavLink: React.FC<NavLinkProps> = ({ children, ...props }) => {
 }
 
 const NavBar: React.FC<NavBarProps> = () => {
-  const theme = useTheme();
-
   return (
-    <Flex
-      as='header'
-      alignItems='center'
-      w='100%'
-      wrap='wrap'
-      justify='space-between'
-      px={6}
-      py={5}
-    >
-      <Heading as='a' href='/' size='md'>
-        patchan.dev
-      </Heading>
-      <Stack direction='row'>
-        <Stack as='nav' align='center' direction='row' spacing={1}>
-          <NavLink href='#about'>About</NavLink>
-          <NavLink href='#experience'>Experience</NavLink>
-          <NavLink href='#projects'>Projects</NavLink>
-        </Stack>
-        <Button
-          as='a'
-          tabIndex={0}
-          size='md'
-          borderRadius='10px'
-          colorScheme='green'
-          leftIcon={<FiFileText size='1.1em' />}
-          iconSpacing={1}
-          href='/files/PatrickChan_Resume.pdf'
-        >
-          Resume
-        </Button>
+    <Stack direction='row' justify='flex-end' p={10}>
+      <Stack as='nav' align='center' direction='row' spacing={1}>
+        <NavLink target='about'>About</NavLink>
+        <NavLink target='experience'>Experience</NavLink>
+        <NavLink target='projects'>Projects</NavLink>
       </Stack>
-    </Flex>
+      <Button
+        as='a'
+        tabIndex={0}
+        size='md'
+        borderRadius='10px'
+        colorScheme='green'
+        leftIcon={<FiFileText size='1.1em' />}
+        iconSpacing={1}
+        href='/files/PatrickChan_Resume.pdf'
+      >
+        Resume
+      </Button>
+    </Stack>
   );
 }
 
