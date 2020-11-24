@@ -44,7 +44,7 @@ const NavBar: React.FC<NavBarProps> = () => {
   const theme = useTheme();
 
   return (
-    <Container maxW={theme.sizes.width}>
+    <Container maxW={theme.sizes.width} p={0}>
       <Stack direction='row' justify='flex-end' p={10} >
         <Stack as='nav' align='center' direction='row' spacing={1}>
           <NavLink target='about'>About</NavLink>
