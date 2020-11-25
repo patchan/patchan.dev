@@ -15,7 +15,7 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
   return (
     <SubSection id='profile'>
       <Flex align='center' justify='flex-start' wrap='wrap'>
-        <Box w={{ base: '200px', md: '200px', lg: '22%'}} h='100%'>
+        <Box display='block' w='220px' h='100%' align='left' py={5}>
           <Image
             w='80%'
             maxW='200px'
@@ -24,25 +24,31 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
             alt={name}
           />
         </Box>
-        <Box w={{ base: '100%', md: '70%'}} h='100%' py={10}>
-          <Flex direction='column'>
-            <Heading as='h1' size='4xl' fontFamily='Open Sans'>
-              {name}
-            </Heading>
-            <Text fontSize='xl' color={theme.colors.text.secondary}>
-              {description}
-            </Text>
-            <Stack
-              aria-label='contact info'
-              alignItems='center'
-              mt={5}
-              direction='row'
-              spacing={5}
-            >
-              {contact}
-            </Stack>
-          </Flex>
-        </Box>
+        <Flex
+          direction='column'
+          flexGrow={1}
+          flexShink={1}
+          flexBasis={0}
+          minW='468px'
+          h='100%'
+          py={5}
+        >
+          <Heading as='h1' size='4xl' fontFamily='Open Sans'>
+            {name}
+          </Heading>
+          <Text fontSize='xl' color={theme.colors.text.secondary}>
+            {description}
+          </Text>
+          <Stack
+            aria-label='contact info'
+            alignItems='center'
+            mt={5}
+            direction='row'
+            spacing={5}
+          >
+            {contact}
+          </Stack>
+        </Flex>
       </Flex>
     </SubSection>
   );

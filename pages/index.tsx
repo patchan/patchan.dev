@@ -37,7 +37,7 @@ const contactInfo = (
 const IndexPage = () => {
   return (
     <>
-      <div id='skip'></div>
+      <a id='skip' aria-label='skip navigation bar' href='#profile'></a>
       <Head>
         <title>{siteTitle}</title>
         <meta name='description' content={siteDescription} />

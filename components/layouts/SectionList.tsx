@@ -10,15 +10,23 @@ type SectionListProps = {
 const SectionList: React.FC<SectionListProps> = ({ children, heading }) => {
   return (
     <SubSection id='experience'>
-      <Flex justify='flex-start' wrap='wrap'>
-        <Box w={{ base: '250px', md: '200px', lg: '22%' }} minW='200px' h='100%' align='left' py={5}>
+      <Flex alignItems='stretch' justify='flex-start' wrap='wrap'>
+        <Box display='block' w='220px' h='100%' align='left' py={5}>
           <Heading size='lg' fontFamily='Open Sans'>{heading}</Heading>
         </Box>
-        <Box w={{ base: '100%', md: '70%', lg: '78%'}} h='100%' py={5}>
-          <Stack as='ul' align='start' spacing={14}>
-            {children}
-          </Stack>
-        </Box>
+        <Stack
+          as='ul'
+          align='start'
+          flexGrow={1}
+          flexShink={1}
+          flexBasis={0}
+          minW='468px'
+          h='100%'
+          py={5}
+          spacing={14}
+        >
+          {children}
+        </Stack>
       </Flex>
     </SubSection>
   );

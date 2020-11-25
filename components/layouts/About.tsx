@@ -9,15 +9,21 @@ type AboutProps = {
 const About: React.FC<AboutProps> = ({ children }) => {
   return (
     <SubSection id='about'>
-      <Flex justify='flex-start' wrap='wrap'>
-        <Box w={{ base: '250px', md: '200px', lg: '22%' }} minw='200px' h='100%' align='left' py={5}>
+      <Flex alignItems='stretch' justify='flex-start' wrap='wrap'>
+        <Box display='block' w='220px' h='100%' align='left' py={5}>
           <Heading size='lg' fontFamily='Open Sans'>About Me</Heading>
         </Box>
-        <Box w={{ base: '100%', md: '70%', lg: '78%'}} h='100%' py={5}>
-          <Stack>
-            {children}
-          </Stack>
-        </Box>
+        <Stack
+          align='start'
+          flexGrow={1}
+          flexShink={1}
+          flexBasis={0}
+          minW='468px'
+          h='100%'
+          py={5}
+        >
+          {children}
+        </Stack>
       </Flex>
     </SubSection>
   );

@@ -58,15 +58,11 @@ const NavBar: React.FC<NavBarProps> = () => {
   const theme = useTheme();
 
   return (
-    <Box as='header' backgroundColor={theme.colors.white} position='sticky' top={0} zIndex={2}>
-      <Box maxW={theme.sizes.width} p={0}>
+    <Box as='header' w='100%' backgroundColor={theme.colors.white} position='sticky' top={0} zIndex={2}>
+      <Box maxW={theme.sizes.width} p={0} mx='auto'>
         <Stack direction='row' align='center' px={10} py={5}>
           <NavLink label='go to page top' target='skip' style='icon'>
-            <Image
-              aria-hidden
-              width='40px'
-              src='/apple-touch-icon.png'
-            />
+            <Image aria-hidden width='32px' src='/apple-touch-icon.png' />
           </NavLink>
           <Spacer />
           <Stack as='nav' align='center' direction='row' spacing={1}>
