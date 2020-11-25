@@ -15,7 +15,7 @@ const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }
   return (
     <Stack w='100%'>
       <Stack direction='row' wrap='wrap' align='center' spacing={0}>
-        <Heading as='h3' fontSize='1.2em'>
+        <Heading as='h3' fontSize='1.2em' fontFamily='Merriweather Sans'>
           <Link href={link}>
             {company}
           </Link>

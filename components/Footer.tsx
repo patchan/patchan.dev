@@ -11,7 +11,7 @@ const Footer: React.FC<FooterProps> = () => {
       <Center>
         <Stack align='center' spacing={1}>
           <Text fontSize='sm'>
-            Copyright © {new Date().getFullYear()} <a href='/'>Patrick Chan</a>
+            Copyright © <a href='/'>Patrick Chan</a> {new Date().getFullYear()}
           </Text>
         </Stack>
       </Center>

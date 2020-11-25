@@ -13,7 +13,7 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
   return (
     <Stack w='100%'>
       <Stack direction='row' align='center'>
-        <Heading as='h3' fontSize='1.2em'>{title}</Heading>
+        <Heading as='h3' fontSize='1.2em' fontFamily='Merriweather Sans'>{title}</Heading>
         <Spacer />
         <Button
           as='a'
@@ -26,10 +26,10 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
           Source code
         </Button>
       </Stack>
+      <Text>{description}</Text>
       <Stack aria-label='technologies used' direction='row' wrap='wrap'>
         {tech?.map((tag) => <Tag key={tag} size='sm'>{tag}</Tag>)}
       </Stack>
-      <Text>{description}</Text>
     </Stack>
   );
 }

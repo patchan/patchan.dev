@@ -10,7 +10,12 @@ const theme = extendTheme({
       primary: '#000',
       secondary: '#696969'
     }
-  }
+  },
+  fonts: {
+    header: 'Merriweather Sans',
+    body: 'Open Sans',
+    mono: 'Menlo'
+  },
 })
 
 function App({ Component, pageProps }: AppProps) {
