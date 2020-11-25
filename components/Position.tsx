@@ -1,5 +1,6 @@
 import React from 'react'
 import { Heading, Link, Spacer, Stack, Tag, Text, useTheme } from '@chakra-ui/react'
+import SectionListItem from './layouts/SectionListItem';
 
 type PositionProps = {
   company: string;
@@ -13,7 +14,7 @@ const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }
   const theme = useTheme();
 
   return (
-    <Stack w='100%'>
+    <SectionListItem>
       <Heading as='h3' fontSize='1.3em' fontFamily='Open Sans'>
         <Link href={link}>
           {company}
@@ -28,7 +29,7 @@ const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }
       <Stack aria-label='technologies used' direction='row' wrap='wrap'>
         {tech?.map((tag) => <Tag key={tag}>{tag}</Tag>)}
       </Stack>
-    </Stack>
+    </SectionListItem>
   );
 }
 

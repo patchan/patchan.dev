@@ -5,13 +5,12 @@ import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import ContactIcon from '../components/ContactIcon';
 import Footer from '../components/Footer';
 import About from '../components/layouts/About';
-import Experience from '../components/layouts/Experience';
 import PageLayout from '../components/layouts/PageLayout';
 import Profile from '../components/layouts/Profile';
-import Projects from '../components/layouts/Projects';
 import NavBar from '../components/NavBar';
 import Position from '../components/Position';
 import Project from '../components/Project';
+import SectionList from '../components/layouts/SectionList';
 
 const siteTitle = 'Patrick Chan | Software Developer';
 const siteDescription = 'Patrick Chan is a software developer from Vancouver, BC';
@@ -38,6 +37,7 @@ const contactInfo = (
 const IndexPage = () => {
   return (
     <>
+      <a id='skip' aria-label='skip navigation bar' href='#profile'></a>
       <Head>
         <title>{siteTitle}</title>
         <meta name='description' content={siteDescription} />
@@ -62,7 +62,7 @@ const IndexPage = () => {
             When indoors, I am an aspiring jazz musician who spends an unusual amount of time immersed playing the piano, saxophone, or drums. On occasion, you might spot me performing in a local jazz club or at an open jam session.
           </Text>
         </About>
-        <Experience>
+        <SectionList heading='Experience'>
           <Position
             company='Thrive Health'
             link='https://thrive.health'
@@ -77,8 +77,8 @@ const IndexPage = () => {
             dates={{ start: 'Nov 2016', end: 'Jun 2019'}}
             tech={['R', 'Python', 'REDCap']}
           />
-        </Experience>
-        <Projects>
+        </SectionList>
+        <SectionList heading='Projects'>
          <Project
             title='potatofy'
             link='https://patchan.ca/potatofy'
@@ -97,7 +97,7 @@ const IndexPage = () => {
             tech={['Python', 'Scikit-learn', 'pandas']}
             description='Machine learning model for scoring the ADAS-Cog Plus cognitive assessment'
           />
-        </Projects>
+        </SectionList>
         <Box p={20} />
       </PageLayout>
       <Footer />

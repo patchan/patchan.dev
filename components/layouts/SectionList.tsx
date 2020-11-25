@@ -2,18 +2,20 @@ import React, { ReactNode } from 'react'
 import { Box, Flex, Heading, Stack } from '@chakra-ui/react'
 import SubSection from './SubSection';
 
-type AboutProps = {
+type SectionListProps = {
   children?: ReactNode;
+  heading: string;
 }
 
-const About: React.FC<AboutProps> = ({ children }) => {
+const SectionList: React.FC<SectionListProps> = ({ children, heading }) => {
   return (
-    <SubSection id='about'>
+    <SubSection id='experience'>
       <Flex alignItems='stretch' justify='flex-start' wrap='wrap'>
         <Box display='block' w='220px' h='100%' align='left' py={5}>
-          <Heading size='lg' fontFamily='Open Sans'>About Me</Heading>
+          <Heading size='lg' fontFamily='Open Sans'>{heading}</Heading>
         </Box>
         <Stack
+          as='ul'
           align='start'
           flexGrow={1}
           flexShink={1}
@@ -21,6 +23,7 @@ const About: React.FC<AboutProps> = ({ children }) => {
           minW='468px'
           h='100%'
           py={5}
+          spacing={14}
         >
           {children}
         </Stack>
@@ -29,4 +32,4 @@ const About: React.FC<AboutProps> = ({ children }) => {
   );
 }
 
-export default About;
+export default SectionList;
