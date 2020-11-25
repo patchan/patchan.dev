@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import { Box, Flex, Heading, Image, Stack, Text, useTheme } from '@chakra-ui/react'
-import SubSection from '../SubSection';
+import SubSection from './SubSection';
 
 type ProfileProps = {
   profileImage: string;
