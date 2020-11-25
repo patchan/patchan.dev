@@ -7,7 +7,7 @@ const Footer: React.FC<FooterProps> = () => {
   const theme = useTheme();
 
   return (
-    <Box p={7} bgColor={theme.colors.gray[100]}>
+    <Box as='footer' p={7} bgColor={theme.colors.gray[100]}>
       <Center>
         <Stack align='center' spacing={1}>
           <Text fontSize='sm'>

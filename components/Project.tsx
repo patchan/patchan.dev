@@ -18,7 +18,7 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
         <Button
           as='a'
           size='sm'
-          colorScheme='green'
+          colorScheme='purple'
           href={link}
           leftIcon={<IoLogoGithub size={18} />}
           iconSpacing={1}
@@ -27,7 +27,7 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
         </Button>
       </Stack>
       <Stack aria-label='technologies used' direction='row' wrap='wrap'>
-        {tech?.map((tag) => <Tag size='sm'>{tag}</Tag>)}
+        {tech?.map((tag) => <Tag key={tag} size='sm'>{tag}</Tag>)}
       </Stack>
       <Text>{description}</Text>
     </Stack>

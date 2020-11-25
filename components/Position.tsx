@@ -25,7 +25,7 @@ const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }
       </Stack>
       <Text size='sm' color={theme.colors.text.secondary}>{title}</Text>
       <Stack aria-label='technologies used' direction='row' wrap='wrap'>
-        {tech?.map((tag) => <Tag size='sm'>{tag}</Tag>)}
+        {tech?.map((tag) => <Tag key={tag} size='sm'>{tag}</Tag>)}
       </Stack>
     </Stack>
   );

@@ -9,7 +9,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
   const theme = useTheme();
 
   return (
-    <Container maxW={theme.sizes.width} px={10}>
+    <Container as='main' maxW={theme.sizes.width} px={10}>
       {children}
     </Container>
   );

@@ -57,7 +57,7 @@ const NavBar: React.FC<NavBarProps> = () => {
           tabIndex={0}
           size='md'
           borderRadius='10px'
-          colorScheme='green'
+          colorScheme='purple'
           leftIcon={<FiFileText size='1.1em' />}
           iconSpacing={1}
           href='/files/PatrickChan_Resume.pdf'
