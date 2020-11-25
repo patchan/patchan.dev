@@ -11,12 +11,7 @@ const theme = extendTheme({
       secondary: '#696969'
     }
   },
-  fonts: {
-    header: 'Merriweather Sans',
-    body: 'Open Sans',
-    mono: 'Menlo'
-  },
-})
+});
 
 function App({ Component, pageProps }: AppProps) {
   return (
