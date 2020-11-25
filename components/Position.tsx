@@ -20,7 +20,11 @@ const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }
         </Link>
       </Heading>
       <Stack direction='row' wrap='wrap' align='center' spacing={0}>
-        <Text size='sm' color={theme.colors.text.secondary}>{title}</Text>
+        <Heading as='h3' fontSize='1.3em' fontFamily='Merriweather Sans'>
+          <Link href={link}>
+            {company}
+          </Link>
+        </Heading>
         <Spacer />
         <Text color={theme.colors.text.secondary}>{`${dates.start} to ${dates.end}`}</Text> 
       </Stack>
