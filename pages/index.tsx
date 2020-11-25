@@ -62,7 +62,7 @@ const IndexPage = () => {
             When indoors, I am an aspiring jazz musician who spends an unusual amount of time immersed playing the piano, saxophone, or drums. On occasion, you might spot me performing in a local jazz club or at an open jam session.
           </Text>
         </About>
-        <SectionList heading='Experience'>
+        <SectionList id='experience' heading='Experience'>
           <Position
             company='Thrive Health'
             link='https://thrive.health'
@@ -78,7 +78,7 @@ const IndexPage = () => {
             tech={['R', 'Python', 'REDCap']}
           />
         </SectionList>
-        <SectionList heading='Projects'>
+        <SectionList id='projects' heading='Projects'>
          <Project
             title='potatofy'
             link='https://patchan.ca/potatofy'

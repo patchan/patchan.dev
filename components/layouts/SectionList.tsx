@@ -5,11 +5,12 @@ import SubSection from './SubSection';
 type SectionListProps = {
   children?: ReactNode;
   heading: string;
+  id: string;
 }
 
-const SectionList: React.FC<SectionListProps> = ({ children, heading }) => {
+const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
   return (
-    <SubSection id='experience'>
+    <SubSection id={id}>
       <Flex alignItems='stretch' justify='flex-start' wrap='wrap'>
         <Box display='block' w='220px' h='100%' align='left' py={5}>
           <Heading size='lg' fontFamily='Open Sans'>{heading}</Heading>
