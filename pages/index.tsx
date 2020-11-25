@@ -38,6 +38,7 @@ const contactInfo = (
 const IndexPage = () => {
   return (
     <>
+      <div id='skip'></div>
       <Head>
         <title>{siteTitle}</title>
         <meta name='description' content={siteDescription} />
