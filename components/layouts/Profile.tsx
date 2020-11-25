@@ -15,7 +15,13 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
   return (
     <SubSection id='profile'>
       <Flex align='center' justify='flex-start' wrap='wrap'>
-        <Box display='block' w='220px' h='100%' align='left' py={5}>
+        <Box
+          display='block'
+          minW={{ base: '200px', sm: '200px', md: '220px' }}
+          h='100%'
+          align='left'
+          py={5}
+        >
           <Image
             w='80%'
             maxW='200px'
@@ -27,9 +33,9 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
         <Flex
           direction='column'
           flexGrow={1}
-          flexShink={1}
+          flexShrink={1}
           flexBasis={0}
-          minW='468px'
+          minW='60%'
           h='100%'
           py={5}
         >

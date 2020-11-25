@@ -10,15 +10,21 @@ const About: React.FC<AboutProps> = ({ children }) => {
   return (
     <SubSection id='about'>
       <Flex alignItems='stretch' justify='flex-start' wrap='wrap'>
-        <Box display='block' w='220px' h='100%' align='left' py={5}>
+        <Box
+          display='block'
+          minW={{ base: '200px', sm: '200px', md: '220px' }}
+          h='100%'
+          align='left'
+          py={5}
+        >
           <Heading size='lg' fontFamily='Open Sans'>About Me</Heading>
         </Box>
         <Stack
           align='start'
           flexGrow={1}
-          flexShink={1}
+          flexShrink={1}
           flexBasis={0}
-          minW='468px'
+          minW='60%'
           h='100%'
           py={5}
         >
