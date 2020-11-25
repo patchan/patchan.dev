@@ -10,5 +10,4 @@ The site is designed by me with accessibility at its core. Read more about impro
 * [TypeScript](https://www.typescriptlang.org/)
 * [Next.js](https://nextjs.org/) for speedy, easy to build webpages, bundled with many amazing optimizations
 * [Chakra-UI](https://chakra-ui.com/) for highly customizable and accessibility minded React components
-
-Automatic deployment on [Netlify](https://www.netlify.com).
+* [Netlify](https://www.netlify.com) for automatic deployment
