@@ -1,7 +1,14 @@
 # patchan.dev
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9bd9f3f7-c165-4a65-bfdc-855abc8241f7/deploy-status)](https://app.netlify.com/sites/vibrant-aryabhata-d5826a/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9bd9f3f7-c165-4a65-bfdc-855abc8241f7/deploy-status)](https://patchan.dev)
 
-Welcome to my personal website!
+Welcome! This is the source code for my personal website at [patchan.dev](https://patchan.dev).
 
-[patchan.dev](https://patchan.dev) is created with accessibility in mind. It is built using [TypeScript](https://www.typescriptlang.org/), [Next.js](https://nextjs.org/), [Chakra-ui](https://chakra-ui.com/), and deployed on [Netlify](https://www.netlify.com).
+The site is designed by me with accessibility at its core. Read more about improving digital accessibility at the [a11y project](https://www.a11yproject.com).
+
+### Technologies Used:
+* [TypeScript](https://www.typescriptlang.org/)
+* [Next.js](https://nextjs.org/) for speedy, easy to build webpages, bundled with many amazing optimizations
+* [Chakra-UI](https://chakra-ui.com/) for highly customizable and accessibility minded React components
+
+Automatic deployment on [Netlify](https://www.netlify.com).
