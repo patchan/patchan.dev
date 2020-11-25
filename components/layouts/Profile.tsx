@@ -26,7 +26,7 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
         </Box>
         <Box w={{ base: '100%', md: '70%'}} h='100%' py={10}>
           <Flex direction='column'>
-            <Heading as='h1' size='4xl' fontFamily='Merriweather Sans'>
+            <Heading as='h1' size='4xl' fontFamily='Open Sans'>
               {name}
             </Heading>
             <Text fontSize='xl' color={theme.colors.text.secondary}>

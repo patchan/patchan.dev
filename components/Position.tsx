@@ -14,7 +14,7 @@ const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }
 
   return (
     <Stack w='100%'>
-      <Heading as='h3' fontSize='1.3em' fontFamily='Merriweather Sans'>
+      <Heading as='h3' fontSize='1.3em' fontFamily='Open Sans'>
         <Link href={link}>
           {company}
         </Link>
@@ -26,7 +26,7 @@ const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }
       </Stack>
       
       <Stack aria-label='technologies used' direction='row' wrap='wrap'>
-        {tech?.map((tag) => <Tag key={tag} size='sm'>{tag}</Tag>)}
+        {tech?.map((tag) => <Tag key={tag}>{tag}</Tag>)}
       </Stack>
     </Stack>
   );
