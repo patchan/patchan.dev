@@ -13,7 +13,7 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
   return (
     <Stack w='100%'>
       <Stack direction='row' align='center'>
-        <Heading as='h3' fontSize='1.2em' fontFamily='Merriweather Sans'>{title}</Heading>
+        <Heading as='h3' fontSize='1.3em' fontFamily='Merriweather Sans'>{title}</Heading>
         <Spacer />
         <Button
           as='a'
