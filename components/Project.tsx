@@ -23,6 +23,7 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
           size='sm'
           colorScheme='purple'
           href={link}
+          target='_blank'
           leftIcon={<IoLogoGithub size={18} />}
           iconSpacing={1}
         >

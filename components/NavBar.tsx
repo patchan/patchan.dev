@@ -79,6 +79,7 @@ const NavBar: React.FC<NavBarProps> = () => {
             leftIcon={<FiFileText size='1.1em' />}
             iconSpacing={1}
             href='/files/PatrickChan_Resume.pdf'
+            target='_blank'
           >
             Resume
           </Button>

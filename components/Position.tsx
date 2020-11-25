@@ -16,7 +16,7 @@ const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }
   return (
     <SectionListItem>
       <Heading as='h3' fontSize='1.3em' fontFamily='Open Sans'>
-        <Link href={link}>
+        <Link href={link} isExternal>
           {company}
         </Link>
       </Heading>
