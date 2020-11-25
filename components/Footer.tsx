@@ -7,11 +7,11 @@ const Footer: React.FC<FooterProps> = () => {
   const theme = useTheme();
 
   return (
-    <Box p={7} bgColor={theme.colors.gray[100]}>
+    <Box as='footer' p={7} bgColor={theme.colors.gray[100]}>
       <Center>
         <Stack align='center' spacing={1}>
           <Text fontSize='sm'>
-            Copyright © {new Date().getFullYear()} <a href='/'>Patrick Chan</a>
+            Copyright © <a href='/'>Patrick Chan</a> {new Date().getFullYear()}
           </Text>
         </Stack>
       </Center>

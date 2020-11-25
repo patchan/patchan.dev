@@ -15,7 +15,7 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
   return (
     <SubSection id='profile'>
       <Flex align='center' justify='flex-start' wrap='wrap'>
-        <Box w={{ base: '200px', md: '200px', lg: '22%'}} h='100%' py={5}>
+        <Box w={{ base: '200px', md: '200px', lg: '22%'}} h='100%'>
           <Image
             w='80%'
             maxW='200px'
@@ -26,7 +26,7 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
         </Box>
         <Box w={{ base: '100%', md: '70%'}} h='100%' py={10}>
           <Flex direction='column'>
-            <Heading as='h1' size='3xl'>
+            <Heading as='h1' size='4xl' fontFamily='Merriweather Sans'>
               {name}
             </Heading>
             <Text fontSize='xl' color={theme.colors.text.secondary}>

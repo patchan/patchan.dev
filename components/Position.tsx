@@ -14,18 +14,19 @@ const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }
 
   return (
     <Stack w='100%'>
+      <Heading as='h3' fontSize='1.3em' fontFamily='Merriweather Sans'>
+        <Link href={link}>
+          {company}
+        </Link>
+      </Heading>
       <Stack direction='row' wrap='wrap' align='center' spacing={0}>
-        <Heading as='h3' fontSize='1.2em'>
-          <Link href={link}>
-            {company}
-          </Link>
-        </Heading>
+        <Text size='sm' color={theme.colors.text.secondary}>{title}</Text>
         <Spacer />
         <Text color={theme.colors.text.secondary}>{`${dates.start} to ${dates.end}`}</Text> 
       </Stack>
-      <Text size='sm' color={theme.colors.text.secondary}>{title}</Text>
+      
       <Stack aria-label='technologies used' direction='row' wrap='wrap'>
-        {tech?.map((tag) => <Tag size='sm'>{tag}</Tag>)}
+        {tech?.map((tag) => <Tag key={tag} size='sm'>{tag}</Tag>)}
       </Stack>
     </Stack>
   );
