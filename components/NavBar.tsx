@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Button, Image, Link, Spacer, Stack, useTheme } from "@chakra-ui/react";
 import { FiFileText } from 'react-icons/fi';
 
@@ -56,9 +56,28 @@ export const NavLink: React.FC<NavLinkProps> = ({ children, target, style, label
 
 const NavBar: React.FC<NavBarProps> = () => {
   const theme = useTheme();
+  const [boxShadow, setBoxShadow] = useState('none');
+
+  const handleScroll = () => {
+    return (window.scrollY > 30) ? setBoxShadow('md') : setBoxShadow('none');
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  });
 
   return (
-    <Box as='header' w='100%' backgroundColor={theme.colors.white} position='sticky' top={0} zIndex={2}>
+    <Box
+      as='header'
+      w='100%'
+      backgroundColor={theme.colors.white}
+      position='sticky'
+      top={0}
+      zIndex={1}
+      boxShadow={boxShadow}
+      transition='ease'
+      transitionDuration='0.25s'
+    >
       <Box maxW={theme.sizes.width} p={0} mx='auto'>
         <Stack direction='row' align='center' px={10} py={5}>
           <NavLink label='go to page top' target='skip' style='icon'>
