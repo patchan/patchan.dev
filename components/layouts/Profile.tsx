@@ -14,7 +14,7 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
   
   return (
     <SubSection id='profile'>
-      <Flex align='center' justify='flex-start' wrap='wrap'>
+      <Flex align='center' justify='flex-start' wrap='wrap' pt={5}>
         <Box
           display='block'
           minW={{ base: '200px', sm: '200px', md: '220px' }}

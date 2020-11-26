@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import About from '../components/layouts/About';
 import PageLayout from '../components/layouts/PageLayout';
 import Profile from '../components/layouts/Profile';
-import NavBar from '../components/NavBar';
+import NavBar from '../components/Nav/NavBar';
 import Position from '../components/Position';
 import Project from '../components/Project';
 import SectionList from '../components/layouts/SectionList';
@@ -38,6 +38,7 @@ const IndexPage = () => {
   return (
     <>
       <a id='skip' aria-label='skip navigation bar' href='#profile'></a>
+      <div id='top' />
       <Head>
         <title>{siteTitle}</title>
         <meta name='description' content={siteDescription} />

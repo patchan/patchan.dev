@@ -38,4 +38,4 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
   </div>
 )
 
-export default Layout
+export default Layout;
