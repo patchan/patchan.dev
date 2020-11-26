@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Box, Button, Image, Link, Spacer, Stack, useTheme } from "@chakra-ui/react";
-import { FiFileText } from 'react-icons/fi';
+import { Box, Button, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay, IconButton, Image, Link, Spacer, Stack, Text, useDisclosure, useTheme } from "@chakra-ui/react";
+import { FiFileText, FiMenu, FiX } from 'react-icons/fi';
+import { useWindowSize } from './hooks/useWindowSize';
 
 type NavBarProps = {}
 
@@ -41,15 +42,35 @@ export const NavLink: React.FC<NavLinkProps> = ({ children, target, style, label
       tabIndex={0}
       size='md'
       height='30px'
-      borderRadius={25}
       p={3}
       variant='ghost'
+      colorScheme='purple'
       onClick={handleInput}
       onTouchEnd={handleInput}
       onKeyDown={handleKeyInput}
       {...props}
     >
-      {children}
+      <Text color='black'>
+        {children}
+      </Text>
+    </Button>
+  );
+}
+
+export const ResumeLink: React.FC = () => {
+  return (
+      <Button
+      as='a'
+      tabIndex={0}
+      size='md'
+      borderRadius='8px'
+      colorScheme='purple'
+      leftIcon={<FiFileText size='1.1em' />}
+      iconSpacing={1}
+      href='/files/PatrickChan_Resume.pdf'
+      target='_blank'
+    >
+      Resume
     </Button>
   );
 }
@@ -57,6 +78,16 @@ export const NavLink: React.FC<NavLinkProps> = ({ children, target, style, label
 const NavBar: React.FC<NavBarProps> = () => {
   const theme = useTheme();
   const [boxShadow, setBoxShadow] = useState('none');
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const windowSize = useWindowSize();
+
+  const openDrawer = () => {
+    onOpen();
+  }
+
+  const closeDrawer = () => {
+    onClose();
+  }
 
   const handleScroll = () => {
     return (window.scrollY > 30) ? setBoxShadow('md') : setBoxShadow('none');
@@ -64,7 +95,7 @@ const NavBar: React.FC<NavBarProps> = () => {
 
   React.useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   return (
     <Box
@@ -79,7 +110,8 @@ const NavBar: React.FC<NavBarProps> = () => {
       transitionDuration='0.25s'
     >
       <Box maxW={theme.sizes.width} p={0} mx='auto'>
-        <Stack direction='row' align='center' px={10} py={5}>
+      {windowSize.width > 750 ? 
+        <Stack direction='row' align='center' px={10} py={4}>
           <NavLink label='go to page top' target='skip' style='icon'>
             <Image aria-hidden width='32px' src='/apple-touch-icon.png' />
           </NavLink>
@@ -89,20 +121,51 @@ const NavBar: React.FC<NavBarProps> = () => {
             <NavLink target='experience' style='text'>Experience</NavLink>
             <NavLink target='projects' style='text'>Projects</NavLink>
           </Stack>
-          <Button
-            as='a'
+          <ResumeLink />
+        </Stack>
+        :
+        <Stack direction='row' align='center' px={10} py={4}>
+          <NavLink label='go to page top' target='skip' style='icon'>
+            <Image aria-hidden width='32px' src='/apple-touch-icon.png' />
+          </NavLink>
+          <Spacer />
+          <IconButton
             tabIndex={0}
-            size='md'
+            aria-label='Open Menu'
+            width='40px'
             borderRadius='10px'
             colorScheme='purple'
-            leftIcon={<FiFileText size='1.1em' />}
-            iconSpacing={1}
-            href='/files/PatrickChan_Resume.pdf'
-            target='_blank'
-          >
-            Resume
-          </Button>
+            icon={<FiMenu size='22px' color='black' />}
+            variant='ghost'
+            onClick={openDrawer}
+          />
+          <Drawer isOpen={isOpen} onClose={onClose} size='xs'>
+            <DrawerOverlay>
+              <DrawerContent>
+                <DrawerHeader p={0}>
+                  <DrawerBody p={4}>
+                    <Box align='right'>
+                      <IconButton
+                        aria-label='Close Menu'
+                        colorScheme='purple'
+                        icon={<FiX size='22px' color='black' />}
+                        variant='ghost'
+                        onClick={closeDrawer}
+                      />
+                    </Box>
+                    <Stack p={4} spacing={4}>
+                      <NavLink target='about' style='text'>About</NavLink>
+                      <NavLink target='experience' style='text'>Experience</NavLink>
+                      <NavLink target='projects' style='text'>Projects</NavLink>
+                      <ResumeLink />
+                    </Stack>
+                  </DrawerBody>
+                </DrawerHeader>
+              </DrawerContent>
+            </DrawerOverlay>
+          </Drawer>
         </Stack>
+      }
       </Box>
     </Box>
   );
