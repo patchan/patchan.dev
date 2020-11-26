@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@chakra-ui/react';
 import { FiFileText } from 'react-icons/fi';
 
-export const ResumeLink: React.FC = () => {
+const ResumeLink: React.FC = () => {
   return (
       <Button
       as='a'
@@ -19,3 +19,5 @@ export const ResumeLink: React.FC = () => {
     </Button>
   );
 }
+
+export default ResumeLink;

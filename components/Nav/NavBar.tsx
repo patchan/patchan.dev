@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Box, IconButton, Spacer, Stack, useDisclosure, useTheme } from "@chakra-ui/react";
 import { FiMenu } from 'react-icons/fi';
 import { useWindowSize } from '../hooks/useWindowSize';
-import { NavLink } from './NavLink';
-import { LogoLink } from './LogoLink';
-import { ResumeLink } from './ResumeLink';
-import { NavDrawer } from './NavDrawer';
+import NavLink from './NavLink';
+import LogoLink from './LogoLink';
+import ResumeLink from './ResumeLink';
+import NavDrawer from './NavDrawer';
 
 type NavBarProps = {}
 
@@ -78,4 +78,4 @@ const NavBar: React.FC<NavBarProps> = () => {
   );
 }
 
-export default NavBar
+export default NavBar;

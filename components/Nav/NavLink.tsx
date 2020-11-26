@@ -8,7 +8,7 @@ type NavLinkProps = {
   label?: string;
 }
 
-export const NavLink: React.FC<NavLinkProps> = ({ children, target, style, label, ...props }) => {
+const NavLink: React.FC<NavLinkProps> = ({ children, target, style, label, ...props }) => {
   const handleInput = () => {
     const elem = document.getElementById(target);
     elem?.scrollIntoView({ behavior: 'smooth' });
@@ -51,3 +51,5 @@ export const NavLink: React.FC<NavLinkProps> = ({ children, target, style, label
     </Button>
   );
 }
+
+export default NavLink;

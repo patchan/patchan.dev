@@ -2,14 +2,14 @@ import { Box, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay, Ic
 import React from 'react';
 import { FiX } from 'react-icons/fi';
 import { NavItems } from './NavBar';
-import { ResumeLink } from './ResumeLink';
+import ResumeLink from './ResumeLink';
 
 type NavDrawerProps = {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const NavDrawer: React.FC<NavDrawerProps> = ({ isOpen, onClose }) => {
+const NavDrawer: React.FC<NavDrawerProps> = ({ isOpen, onClose }) => {
 
   const closeDrawer = () => {
     onClose();
@@ -41,3 +41,5 @@ export const NavDrawer: React.FC<NavDrawerProps> = ({ isOpen, onClose }) => {
     </Drawer>
   );
 }
+
+export default NavDrawer;
