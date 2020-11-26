@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, Center, Stack, Text, useTheme } from "@chakra-ui/react";
+import React from 'react';
+import { Box, Center, Stack, Text, useTheme } from '@chakra-ui/react';
 
 type FooterProps = {}
 
@@ -11,7 +11,7 @@ const Footer: React.FC<FooterProps> = () => {
       <Center>
         <Stack align='center' spacing={1}>
           <Text fontSize='sm'>
-            Copyright © Patrick Chan {new Date().getFullYear()}
+            © Patrick Chan {new Date().getFullYear()}
           </Text>
         </Stack>
       </Center>
