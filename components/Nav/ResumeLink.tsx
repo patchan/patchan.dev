@@ -14,6 +14,7 @@ const ResumeLink: React.FC = () => {
       iconSpacing={1}
       href='/files/PatrickChan_Resume.pdf'
       target='_blank'
+      rel='noopener'
     >
       Resume
     </Button>

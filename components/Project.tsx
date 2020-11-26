@@ -24,6 +24,7 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
           colorScheme='purple'
           href={link}
           target='_blank'
+          rel='noopener'
           leftIcon={<IoLogoGithub size={18} />}
           iconSpacing={1}
         >

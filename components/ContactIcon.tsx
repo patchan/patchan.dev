@@ -17,6 +17,7 @@ const ContactIcon: React.FC<ContactIconProps> = ({ label, link, icon }) => {
       size='lg'
       href={link}
       target='_blank'
+      rel='noopener'
       icon={icon}
     />
   );
