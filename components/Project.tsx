@@ -35,7 +35,9 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
       </Stack>
       <Text color={theme.colors.text.secondary}>{description}</Text>
       <Stack aria-label='technologies used' direction='row' wrap='wrap'>
-        {tech?.map((tag) => <Tag key={tag} color={theme.colors.text.primary} colorScheme='purple'>{tag}</Tag>)}
+        {tech?.map((tag) =>
+          <Tag key={tag} color={theme.colors.text.primary} colorScheme='purple'>{tag}</Tag>)
+        }
       </Stack>
     </SectionListItem>
   );

@@ -27,7 +27,7 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
             maxW='200px'
             src={profileImage}
             borderRadius='full'
-            alt={name}
+            alt={`portrait of ${name}`}
           />
         </Box>
         <Flex

@@ -9,7 +9,7 @@ type SubSectionProps = {
 const SubSection: React.FC<SubSectionProps> = ({ children, id }) => {
 
   return (
-    <Box id={id} alignItems='center' justifyContent='center' py={20}>
+    <Box as='section' id={id} alignItems='center' justifyContent='center' py={20}>
       {children}
     </Box>
   );

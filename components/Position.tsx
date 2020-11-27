@@ -27,7 +27,9 @@ const Position: React.FC<PositionProps> = ({ company, link, title, dates, tech }
       </Stack>
       
       <Stack aria-label='technologies used' direction='row' wrap='wrap'>
-        {tech?.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+        {tech?.map((tag) =>
+          <Tag key={tag} color={theme.colors.text.primary} colorScheme='purple'>{tag}</Tag>)
+        }
       </Stack>
     </SectionListItem>
   );
