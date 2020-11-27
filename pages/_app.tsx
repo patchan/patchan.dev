@@ -7,8 +7,9 @@ const theme = extendTheme({
   },
   colors: {
     text: {
-      primary: '#000',
-      secondary: '#696969'
+      primary: '#322659',
+      secondary: '#696969',
+      accent: '#553C9A',
     }
   },
 });

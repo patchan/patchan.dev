@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconButton } from '@chakra-ui/react'
+import { IconButton, useTheme } from '@chakra-ui/react'
 
 type ContactIconProps = {
   label: string;
@@ -8,6 +8,8 @@ type ContactIconProps = {
 }
 
 const ContactIcon: React.FC<ContactIconProps> = ({ label, link, icon }) => {
+  const theme = useTheme();
+
   return (
     <IconButton
       as='a'
@@ -15,10 +17,14 @@ const ContactIcon: React.FC<ContactIconProps> = ({ label, link, icon }) => {
       isRound
       tabIndex={0}
       size='lg'
+      colorScheme='purple'
+      color={theme.colors.text.primary}
       href={link}
       target='_blank'
       rel='noopener'
       icon={icon}
+      variant='ghost'
+      boxShadow='md'
     />
   );
 }

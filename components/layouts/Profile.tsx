@@ -37,7 +37,8 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
           flexBasis={0}
           minW='60%'
           h='100%'
-          py={5}
+          px={{ base: 0, sm: 0, md: 8 }}
+          py={{ base: 5, sm: 8 }}
         >
           <Heading as='h1' size='4xl' fontFamily='Open Sans'>
             {name}

@@ -15,6 +15,7 @@ const ResumeLink: React.FC = () => {
       href='/files/PatrickChan_Resume.pdf'
       target='_blank'
       rel='noopener'
+      boxShadow='4px 4px 9px #c9c9c9, -4px -4px 9px #fff'
     >
       Resume
     </Button>

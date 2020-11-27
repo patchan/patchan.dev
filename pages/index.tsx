@@ -55,13 +55,13 @@ const IndexPage = () => {
         />
         <About>
           <Text>
-            Hello! I am a software developer from Vancouver, BC with a background in Neuroscience and Computer Science. I aspire to combine my passion for healthcare and technology to create a positive impact on society, striving to make tools that make life more convenient.
+            Hello! I am a software developer from Vancouver, BC with a background in Neuroscience and Computer Science. I aspire to combine my passion for healthcare and technology to create a positive impact on society. I want to make tools that make healthcare and life more convenient.
           </Text>
           <Text>
-            Apart from being a software developer, I enjoy most of my time outdoors. During the warmer months here in Vancouver, I enjoy hiking and outdoor sports such as soccer. I also enjoy regularly practicing martial arts. In the winter, I enjoy snowsports such as skiing.
+            Apart from developing software, I spend most of my time outdoors. During the warmer months in Vancouver, I enjoy hiking and sports such as soccer and martial arts. In the winter, I mostly enjoy skiing.
           </Text>
           <Text>
-            When indoors, I am an aspiring jazz musician who spends an unusual amount of time immersed playing the piano, saxophone, or drums. On occasion, you might spot me performing in a local jazz club or at an open jam session.
+            When indoors, I am an aspiring jazz musician who spends an unusual amount of time playing the piano, saxophone, or drums. On occasion, you might spot me performing in a local jazz club or at an open jam session.
           </Text>
         </About>
         <SectionList id='experience' heading='Experience'>

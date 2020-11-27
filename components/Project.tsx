@@ -27,13 +27,15 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
           rel='noopener'
           leftIcon={<IoLogoGithub size={18} />}
           iconSpacing={1}
+          boxShadow='4px 4px 9px #c9c9c9, -4px -4px 9px #fff'
+          borderRadius={8}
         >
           Source code
         </Button>
       </Stack>
       <Text color={theme.colors.text.secondary}>{description}</Text>
       <Stack aria-label='technologies used' direction='row' wrap='wrap'>
-        {tech?.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+        {tech?.map((tag) => <Tag key={tag} color={theme.colors.text.primary} colorScheme='purple'>{tag}</Tag>)}
       </Stack>
     </SectionListItem>
   );

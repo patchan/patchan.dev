@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Box, Flex, Heading, Stack } from '@chakra-ui/react'
+import { Box, Flex, Heading, Stack, useTheme } from '@chakra-ui/react'
 import SubSection from './SubSection';
 
 type SectionListProps = {
@@ -9,6 +9,8 @@ type SectionListProps = {
 }
 
 const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
+  const theme = useTheme();
+  
   return (
     <SubSection id={id}>
       <Flex alignItems='stretch' justify='flex-start' wrap='wrap'>
@@ -19,7 +21,13 @@ const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
           align='left'
           py={5}
         >
-          <Heading size='lg' fontFamily='Open Sans'>{heading}</Heading>
+          <Heading
+            size='lg'
+            color={theme.colors.text.accent}
+            fontFamily='Open Sans'
+          >
+            {heading}
+          </Heading>
         </Box>
         <Stack
           as='ul'
@@ -29,8 +37,10 @@ const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
           flexBasis={0}
           minW='60%'
           h='100%'
-          py={5}
+          p={{ base: 5, sm: 8 }}
           spacing={14}
+          boxShadow='6px 6px 11px #d7d8d9, -6px -6px 11px #fff'
+          borderRadius={20}
         >
           {children}
         </Stack>
