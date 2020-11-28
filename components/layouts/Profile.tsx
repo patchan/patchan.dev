@@ -17,9 +17,10 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
       <Flex align='center' justify='flex-start' wrap='wrap' pt={5}>
         <Box
           display='block'
-          minW={{ base: '200px', sm: '200px', md: '220px' }}
+          minW={{ base: '210px', sm: '210px', md: '230px' }}
           h='100%'
           align='left'
+          px={{ base: 2, sm: 0 }}
           py={5}
         >
           <Image
@@ -37,7 +38,7 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
           flexBasis={0}
           minW='60%'
           h='100%'
-          px={{ base: 0, sm: 0, md: 8 }}
+          px={{ base: 2, sm: 0, md: 0 }}
           py={{ base: 5, sm: 8 }}
         >
           <Heading as='h1' size='4xl' fontFamily='Open Sans'>

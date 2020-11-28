@@ -48,10 +48,10 @@ const NavBar: React.FC<NavBarProps> = () => {
       <Box maxW={theme.sizes.width} p={0} mx='auto'>
       {windowSize.width > 750
         ?
-          <Stack direction='row' align='center' px={10} py={4}>
+          <Stack direction='row' align='center' px={10} py={4} spacing={5}>
             <LogoLink />
             <Spacer />
-            <Stack as='nav' align='center' direction='row' spacing={1}>
+            <Stack as='nav' align='center' direction='row' spacing={3}>
               <NavItems />
             </Stack>
             <ResumeLink />

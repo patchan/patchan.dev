@@ -16,13 +16,14 @@ const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
       <Flex alignItems='stretch' justify='flex-start' wrap='wrap'>
         <Box
           display='block'
-          minW={{ base: '200px', sm: '200px', md: '220px' }}
+          minW={{ base: '210px', sm: '210px', md: '230px' }}
           h='100%'
           align='left'
+          px={{ base: 2, sm: 0 }}
           py={5}
         >
           <Heading
-            size='lg'
+            fontSize='3xl'
             color={theme.colors.text.accent}
             fontFamily='Open Sans'
           >
@@ -37,10 +38,7 @@ const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
           flexBasis={0}
           minW='60%'
           h='100%'
-          p={{ base: 5, sm: 8 }}
-          spacing={14}
-          boxShadow='6px 6px 11px #d7d8d9, -6px -6px 11px #fff'
-          borderRadius={20}
+          spacing={5}
         >
           {children}
         </Stack>

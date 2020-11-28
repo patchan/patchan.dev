@@ -4,18 +4,17 @@ import { FiFileText } from 'react-icons/fi';
 
 const ResumeLink: React.FC = () => {
   return (
-      <Button
+    <Button
       as='a'
       tabIndex={0}
       size='md'
-      borderRadius='8px'
+      borderRadius={8}
       colorScheme='purple'
       leftIcon={<FiFileText size='1.1em' />}
-      iconSpacing={1}
       href='/files/PatrickChan_Resume.pdf'
       target='_blank'
       rel='noopener'
-      boxShadow='4px 4px 9px #c9c9c9, -4px -4px 9px #fff'
+      boxShadow='4px 4px 9px #c9c9c9'
     >
       Resume
     </Button>
