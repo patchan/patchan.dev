@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Flex, Heading, Stack, Tag, Text, useTheme } from '@chakra-ui/react'
 import SectionListItem from './layouts/SectionListItem';
-import { FiExternalLink } from 'react-icons/fi';
+import { FiCode } from 'react-icons/fi';
 
 type ProjectProps = {
   title: string;
@@ -41,7 +41,7 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
             href={link}
             target='_blank'
             rel='noopener'
-            leftIcon={<FiExternalLink size={18} />}
+            leftIcon={<FiCode size={18} />}
             boxShadow='4px 4px 9px #c9c9c9'
             borderRadius={8}
             mt={5}
