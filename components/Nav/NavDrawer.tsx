@@ -30,7 +30,7 @@ const NavDrawer: React.FC<NavDrawerProps> = ({ isOpen, onClose }) => {
                   onClick={closeDrawer}
                 />
               </Box>
-              <Stack p={4} spacing={4}>
+              <Stack as='nav' p={4} spacing={4}>
                 <NavItems />
                 <ResumeLink />
               </Stack>

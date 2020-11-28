@@ -5,7 +5,7 @@ import NavLink from './Nav/NavLink';
 
 const Footer: React.FC = () => {
   return (
-    <Box as='footer' p={7}>
+    <Box as='footer' p={{ base: 5, sm: 7 }}>
       <Center>
         <Stack align='center' direction='row' spacing={1}>
           <Text fontSize='sm'>

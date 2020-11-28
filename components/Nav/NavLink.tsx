@@ -24,7 +24,6 @@ const NavLink: React.FC<NavLinkProps> = ({ children, target, style, label, ...pr
     <Link
       tabIndex={0}
       aria-label={label}
-      size='md'
       onClick={handleInput}
       onTouchEnd={handleInput}
       onKeyDown={handleKeyInput}
@@ -35,7 +34,6 @@ const NavLink: React.FC<NavLinkProps> = ({ children, target, style, label, ...pr
     <Button
       as='a'
       tabIndex={0}
-      size='md'
       height='30px'
       p={3}
       variant='ghost'

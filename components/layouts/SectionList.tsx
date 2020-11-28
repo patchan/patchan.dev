@@ -19,6 +19,7 @@ const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
           minW={{ base: '200px', sm: '200px', md: '220px' }}
           h='100%'
           align='left'
+          px={{ base: 2 }}
           py={5}
         >
           <Heading
@@ -37,10 +38,7 @@ const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
           flexBasis={0}
           minW='60%'
           h='100%'
-          p={{ base: 5, sm: 8 }}
-          spacing={14}
-          boxShadow='6px 6px 11px #d7d8d9, -6px -6px 11px #fff'
-          borderRadius={20}
+          spacing={5}
         >
           {children}
         </Stack>

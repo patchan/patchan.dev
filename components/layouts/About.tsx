@@ -17,6 +17,7 @@ const About: React.FC<AboutProps> = ({ children }) => {
           minW={{ base: '200px', sm: '200px', md: '220px' }}
           h='100%'
           align='left'
+          px={{ base: 4 }}
           py={5}
         >
           <Heading
@@ -34,9 +35,10 @@ const About: React.FC<AboutProps> = ({ children }) => {
           flexBasis={0}
           minW='60%'
           h='100%'
-          p={{ base: 5, sm: 8 }}
-          boxShadow='6px 6px 11px #d7d8d9, -6px -6px 11px #fff'
-          borderRadius={20}
+          color={theme.colors.text.secondary}
+          p={{ base: '1rem', sm: 8, md: 8, lg: 10 }}
+          boxShadow={theme.shadows.defaultBox}
+          borderRadius={8}
         >
           {children}
         </Stack>

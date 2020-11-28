@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button, Heading, Spacer, Stack, Tag, Text, useTheme } from '@chakra-ui/react'
-import { IoLogoGithub } from 'react-icons/io';
+import { Button, Flex, Heading, Stack, Tag, Text, useTheme } from '@chakra-ui/react'
 import SectionListItem from './layouts/SectionListItem';
+import { FiExternalLink } from 'react-icons/fi';
 
 type ProjectProps = {
   title: string;
@@ -15,29 +15,40 @@ const Project: React.FC<ProjectProps> = ({ title, link, tech, description }) => 
   
   return (
     <SectionListItem>
-      <Stack direction='row' align='center'>
-        <Heading as='h3' fontSize='1.3em' fontFamily='Open Sans'>{title}</Heading>
-        <Spacer />
-        <Button
-          as='a'
-          size='sm'
-          colorScheme='purple'
-          href={link}
-          target='_blank'
-          rel='noopener'
-          leftIcon={<IoLogoGithub size={18} />}
-          iconSpacing={1}
-          boxShadow='4px 4px 9px #c9c9c9, -4px -4px 9px #fff'
-          borderRadius={8}
-        >
-          Source code
-        </Button>
-      </Stack>
-      <Text color={theme.colors.text.secondary}>{description}</Text>
-      <Stack aria-label='technologies used' direction='row' wrap='wrap'>
-        {tech?.map((tag) =>
-          <Tag key={tag} color={theme.colors.text.primary} colorScheme='purple'>{tag}</Tag>)
-        }
+      <Stack direction='column' spacing={0}>
+        <Heading as='h3' size='md' fontFamily='Open Sans' pb={2}>{title}</Heading>
+        <Text color={theme.colors.text.secondary} pb={2}>{description}</Text>
+        <Flex justify='space-between' align='flex-end' direction='row' wrap='wrap'>
+          <Flex as='ul' aria-label='technologies used' direction='row' wrap='wrap'>
+            {tech?.map((tag) =>
+              <Tag
+                as='li'
+                key={tag}
+                color={theme.colors.text.primary}
+                mr={2}
+                mt={2}
+                maxH={1}
+                colorScheme='purple'
+              >
+                {tag}
+              </Tag>)
+            }
+          </Flex>
+          <Button
+            as='a'
+            size='sm'
+            colorScheme='purple'
+            href={link}
+            target='_blank'
+            rel='noopener'
+            leftIcon={<FiExternalLink size={18} />}
+            boxShadow='4px 4px 9px #c9c9c9'
+            borderRadius={8}
+            mt={5}
+          >
+            Source code
+          </Button>
+        </Flex>
       </Stack>
     </SectionListItem>
   );

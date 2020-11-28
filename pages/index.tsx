@@ -8,7 +8,7 @@ import About from '../components/layouts/About';
 import PageLayout from '../components/layouts/PageLayout';
 import Profile from '../components/layouts/Profile';
 import NavBar from '../components/Nav/NavBar';
-import Position from '../components/Position';
+import Job from '../components/Job';
 import Project from '../components/Project';
 import SectionList from '../components/layouts/SectionList';
 
@@ -65,14 +65,14 @@ const IndexPage = () => {
           </Text>
         </About>
         <SectionList id='experience' heading='Experience'>
-          <Position
+          <Job
             company='Thrive Health'
             link='https://thrive.health'
             title='Software Developer Intern'
             dates={{ start: 'Sep 2020', end: 'Apr 2021'}}
             tech={['TypeScript', 'Node.js', 'React', 'Redux', 'PostgreSQL']}
           />
-          <Position
+          <Job
             company='Aging, Mobility, and Cognitive Neuroscience Lab'
             link='https://cogmob.rehab.med.ubc.ca/'
             title='Research Assistant'

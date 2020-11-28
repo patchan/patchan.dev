@@ -24,7 +24,7 @@ const ContactIcon: React.FC<ContactIconProps> = ({ label, link, icon }) => {
       rel='noopener'
       icon={icon}
       variant='ghost'
-      boxShadow='md'
+      boxShadow='4px 4px 8px rgb(221 221 229 / 0.9)'
     />
   );
 }
