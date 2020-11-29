@@ -4,7 +4,7 @@
 
 Welcome! This is the source code for my personal website at [patchan.dev](https://patchan.dev).
 
-The site is designed by me with accessibility at its core. Read more about improving digital accessibility at the [a11y project](https://www.a11yproject.com).
+The site is designed by me with accessibility at its core. Read more about improving digital accessibility at the [a11y project](https://www.a11yproject.com) and accessibility standards at [w3c](https://www.w3.org/standards/webdesign/accessibility).
 
 ### Technologies Used:
 * [TypeScript](https://www.typescriptlang.org/)
