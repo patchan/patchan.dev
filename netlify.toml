@@ -1,0 +1,11 @@
+## netlify.toml
+
+[build]
+  publish = "out"
+  command = "yarn build"
+
+[[redirects]]
+  from = "/projects/*"
+  to = "https://patchan.github.io/:splat"
+  status = 200
+  force = true
