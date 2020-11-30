@@ -1,2 +1,3 @@
-/projects  /#projects  !200
+/projects  /#projects  200
+/projects/  /#projects  200
 /projects/*  https://patchan.github.io/:splat  301
