@@ -4,7 +4,7 @@ import { FiFileText } from 'react-icons/fi';
 
 const ResumeLink: React.FC = () => {
   const theme = useTheme();
-  const boxShadow = useColorModeValue('4px 4px 9px #c9c9c9', '4px 4px 9px #000');
+  const boxShadow = useColorModeValue('4px 4px 9px #c9c9c9', '3px 3px 6px #000');
   const backgroundColor = useColorModeValue(theme.colors.purple[500], theme.colors.purple[400]);
   const color = useColorModeValue('white', 'black');
 

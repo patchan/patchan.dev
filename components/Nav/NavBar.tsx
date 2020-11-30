@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, IconButton, Spacer, Stack, useColorMode, useColorModeValue, useDisclosure, useTheme } from "@chakra-ui/react";
+import { Box, IconButton, Spacer, Stack, useColorModeValue, useDisclosure, useTheme } from "@chakra-ui/react";
 import { FiMenu } from 'react-icons/fi';
 import { useWindowSize } from '../hooks/useWindowSize';
 import NavLink from './NavLink';
@@ -22,30 +22,15 @@ export const NavItems: React.FC = () => {
 
 const NavBar: React.FC<NavBarProps> = () => {
   const theme = useTheme();
-  const [boxShadow, setBoxShadow] = useState('none');
-  const { colorMode } = useColorMode();
-  const backgroundColor = useColorModeValue(theme.colors.white, theme.colors.dark.background.main);
+  const initialShadow = useColorModeValue('none', 'lg')
+  const [boxShadow, setBoxShadow] = useState(initialShadow);
+  const backgroundColor = useColorModeValue(theme.colors.white, theme.colors.dark.background.card);
   const iconButtonColor = useColorModeValue(theme.colors.black, theme.colors.white);
-  const [isScrolledDark, setIsScrolledDark] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const windowSize = useWindowSize();
 
   const handleScroll = () => {
-    if (colorMode === 'light') {
-      if (window.scrollY > 20) {
-        setBoxShadow('md');
-      } else {
-        setBoxShadow('none')
-      }
-    } else {
-      if (window.scrollY > 20) {
-        setBoxShadow('lg');
-        setIsScrolledDark(true);
-      } else {
-        setBoxShadow('none')
-        setIsScrolledDark(false);
-      }
-    }
+    return (window.scrollY > 20) ? setBoxShadow('lg') : setBoxShadow(initialShadow);
   };
 
   React.useEffect(() => {
@@ -56,7 +41,7 @@ const NavBar: React.FC<NavBarProps> = () => {
     <Box
       as='header'
       w='100%'
-      backgroundColor={isScrolledDark ? theme.colors.dark.background.card : backgroundColor}
+      backgroundColor={backgroundColor}
       position='fixed'
       top={0}
       zIndex={1}
