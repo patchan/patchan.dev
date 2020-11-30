@@ -1,4 +1,4 @@
-import { Box, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay, IconButton, Stack } from '@chakra-ui/react';
+import { Box, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay, IconButton, Stack, useColorModeValue, useTheme } from '@chakra-ui/react';
 import React from 'react';
 import { FiX } from 'react-icons/fi';
 import { NavItems } from './NavBar';
@@ -10,6 +10,9 @@ type NavDrawerProps = {
 }
 
 const NavDrawer: React.FC<NavDrawerProps> = ({ isOpen, onClose }) => {
+  const theme = useTheme();
+  const background = useColorModeValue(theme.colors.white, theme.colors.dark.background.card);
+  const iconButtonColor = useColorModeValue(theme.colors.black, theme.colors.white);
 
   const closeDrawer = () => {
     onClose();
@@ -18,14 +21,14 @@ const NavDrawer: React.FC<NavDrawerProps> = ({ isOpen, onClose }) => {
   return (
     <Drawer isOpen={isOpen} onClose={onClose} size='xs'>
       <DrawerOverlay>
-        <DrawerContent>
+        <DrawerContent backgroundColor={background}>
           <DrawerHeader p={0}>
             <DrawerBody p={4}>
               <Box align='right'>
                 <IconButton
                   aria-label='Close Menu'
                   colorScheme='purple'
-                  icon={<FiX size='22px' color='black' />}
+                  icon={<FiX size='22px' color={iconButtonColor} />}
                   variant='ghost'
                   onClick={closeDrawer}
                 />

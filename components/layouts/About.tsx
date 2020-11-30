@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Box, Flex, Heading, Stack, useTheme } from '@chakra-ui/react'
+import { Box, Flex, Heading, Stack, useColorModeValue, useTheme } from '@chakra-ui/react'
 import SubSection from './SubSection';
 
 type AboutProps = {
@@ -8,6 +8,10 @@ type AboutProps = {
 
 const About: React.FC<AboutProps> = ({ children }) => {
   const theme = useTheme();
+  const boxShadow = useColorModeValue(theme.shadows.boxLight, theme.shadows.boxDark);
+  const headerColor = useColorModeValue(theme.colors.text.accent, theme.colors.white);
+  const background = useColorModeValue(theme.colors.white, theme.colors.dark.background.card);
+  const textColor = useColorModeValue(theme.colors.text.secondary, theme.colors.dark.text.secondary);
 
   return (
     <SubSection id='about'>
@@ -22,7 +26,7 @@ const About: React.FC<AboutProps> = ({ children }) => {
         >
           <Heading
             fontSize='3xl'
-            color={theme.colors.text.accent}
+            color={headerColor}
             fontFamily='Open Sans'
           >
             About Me
@@ -35,10 +39,11 @@ const About: React.FC<AboutProps> = ({ children }) => {
           flexBasis={0}
           minW='60%'
           h='100%'
-          color={theme.colors.text.secondary}
+          color={textColor}
           p={{ base: 4, sm: 8, md: 8, lg: 10 }}
-          boxShadow={theme.shadows.defaultBox}
+          boxShadow={boxShadow}
           borderRadius={8}
+          backgroundColor={background}
         >
           {children}
         </Stack>

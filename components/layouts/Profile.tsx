@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Box, Flex, Heading, Image, Stack, Text, useTheme } from '@chakra-ui/react'
+import { Box, Flex, Heading, Image, Stack, Text, useColorModeValue, useTheme } from '@chakra-ui/react'
 import SubSection from './SubSection';
 
 type ProfileProps = {
@@ -11,6 +11,7 @@ type ProfileProps = {
 
 const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, contact }) => {
   const theme = useTheme();
+  const descriptionColor = useColorModeValue(theme.colors.text.secondary, theme.colors.dark.text.secondary);
   
   return (
     <SubSection id='profile'>
@@ -44,7 +45,7 @@ const Profile: React.FC<ProfileProps> = ({ profileImage, name, description, cont
           <Heading as='h1' size='4xl' fontFamily='Open Sans'>
             {name}
           </Heading>
-          <Text fontSize='xl' color={theme.colors.text.secondary}>
+          <Text fontSize='xl' color={descriptionColor}>
             {description}
           </Text>
           <Stack

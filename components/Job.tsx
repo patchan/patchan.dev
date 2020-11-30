@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Heading, Link, Tag, Text, useTheme } from '@chakra-ui/react'
+import { Flex, Heading, Link, Tag, Text, useColorModeValue, useTheme } from '@chakra-ui/react'
 import SectionListItem from './layouts/SectionListItem';
 
 type JobProps = {
@@ -12,6 +12,9 @@ type JobProps = {
 
 const Job: React.FC<JobProps> = ({ company, link, title, dates, tech }) => {
   const theme = useTheme();
+  const tagBackground = useColorModeValue(theme.colors.purple[100], '#3a3a3a');
+  const tagColor = useColorModeValue(theme.colors.text.primary, '#eaeaea');
+  const textColor = useColorModeValue(theme.colors.text.secondary, theme.colors.dark.text.secondary);
 
   return (
     <SectionListItem>
@@ -21,18 +24,19 @@ const Job: React.FC<JobProps> = ({ company, link, title, dates, tech }) => {
         </Link>
       </Heading>
       <Flex justify='space-between' wrap='wrap' align='center'>
-        <Text color={theme.colors.text.secondary} mr='20%'>{title}</Text>
-        <Text color={theme.colors.text.secondary}>{`${dates.start} to ${dates.end}`}</Text> 
+        <Text color={textColor} mr='20%'>{title}</Text>
+        <Text color={textColor}>{`${dates.start} to ${dates.end}`}</Text> 
       </Flex>
       <Flex as='ul' aria-label='technologies used' direction='row' wrap='wrap'>
         {tech?.map((tag) =>
           <Tag
             as='li'
             key={tag}
-            color={theme.colors.text.primary}
+            color={tagColor}
             mr={2} 
             mt={2}
             colorScheme='purple'
+            backgroundColor={tagBackground}
           >
             {tag}
           </Tag>)
