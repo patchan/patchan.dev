@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Link, Text } from '@chakra-ui/react';
+import { Button, Link, Text, useColorModeValue, useTheme } from '@chakra-ui/react';
 
 type NavLinkProps = {
   children: React.ReactNode;
@@ -9,6 +9,9 @@ type NavLinkProps = {
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ children, target, style, label, ...props }) => {
+  const theme = useTheme();
+  const textColor = useColorModeValue(theme.colors.text.primary, theme.colors.dark.text.primary);
+
   const handleInput = () => {
     const elem = document.getElementById(target);
     elem?.scrollIntoView({ behavior: 'smooth' });
@@ -43,7 +46,7 @@ const NavLink: React.FC<NavLinkProps> = ({ children, target, style, label, ...pr
       onKeyDown={handleKeyInput}
       {...props}
     >
-      <Text color='black'>
+      <Text color={textColor}>
         {children}
       </Text>
     </Button>

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Box, Flex, Heading, Stack, useTheme } from '@chakra-ui/react'
+import { Box, Flex, Heading, Stack, useColorModeValue, useTheme } from '@chakra-ui/react'
 import SubSection from './SubSection';
 
 type SectionListProps = {
@@ -10,6 +10,7 @@ type SectionListProps = {
 
 const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
   const theme = useTheme();
+  const headerColor = useColorModeValue(theme.colors.text.accent, theme.colors.white);
   
   return (
     <SubSection id={id}>
@@ -24,7 +25,7 @@ const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
         >
           <Heading
             fontSize='3xl'
-            color={theme.colors.text.accent}
+            color={headerColor}
             fontFamily='Open Sans'
           >
             {heading}

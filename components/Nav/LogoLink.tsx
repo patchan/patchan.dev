@@ -1,14 +1,18 @@
+import { useColorModeValue, useTheme } from '@chakra-ui/react';
 import React from 'react';
 import NavLink from './NavLink';
 
 const LogoLink: React.FC = () => {
+  const theme = useTheme();
+  const logoColor = useColorModeValue(theme.colors.purple[500], theme.colors.purple[400])
+  
   return (
     <NavLink label='go to page top' target='top' style='icon'>
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
       width="35px" height="35px" viewBox="0 0 512 512"
       preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-        fill="#805AD5" stroke="none">
+        fill={logoColor} stroke="none">
           <path d="M438 5110 c-201 -34 -350 -163 -411 -355 l-22 -70 0 -2125 0 -2125
           22 -70 c52 -166 172 -286 338 -338 l70 -22 2125 0 2125 0 70 22 c166 52 286
           172 338 338 l22 70 0 2125 0 2125 -22 70 c-51 163 -168 282 -333 338 l-65 22

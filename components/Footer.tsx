@@ -1,9 +1,11 @@
 import React from 'react';
-import { Box, Center, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Center, Link, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import { FiChevronUp } from 'react-icons/fi';
 import NavLink from './Nav/NavLink';
 
 const Footer: React.FC = () => {
+  const linkColor = useColorModeValue('purple.500', 'purple.400');
+
   return (
     <Box as='footer' p={{ base: 5, sm: 7 }}>
       <Center>
@@ -14,6 +16,7 @@ const Footer: React.FC = () => {
               href='https://github.com/patchan/patchan.dev'
               target='_blank'
               rel='noopener'
+              color={linkColor}
             >
               open source
             </Link>.

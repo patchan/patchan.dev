@@ -83,7 +83,7 @@ const IndexPage = () => {
         <SectionList id='projects' heading='Projects'>
          <Project
             title='potatofy'
-            link='/projects/potatofy'
+            link='/potatofy'
             tech={['Python', 'OAuth 2.0']}
             description='Questrade integrated desktop GUI application for simplified rebalancing of investment portfolios'
           />
