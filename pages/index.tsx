@@ -66,6 +66,13 @@ const IndexPage = () => {
         </About>
         <SectionList id='experience' heading='Experience'>
           <Job
+            company='Amazon Web Services (AWS)'
+            link='https://aws.amazon.com/sqs/'
+            title='Software Development Engineer Intern'
+            dates={{ start: 'May 2021', end: 'Aug 2021'}}
+            tech={['Kotlin', 'Java', 'Spring']}
+          />
+          <Job
             company='Thrive Health'
             link='https://thrive.health'
             title='Software Developer Intern'
