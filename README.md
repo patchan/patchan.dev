@@ -1,6 +1,6 @@
 # patchan.dev
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9bd9f3f7-c165-4a65-bfdc-855abc8241f7/deploy-status)](https://app.netlify.comites/vibrant-aryabhata-d5826a/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9bd9f3f7-c165-4a65-bfdc-855abc8241f7/deploy-status)](https://app.netlify.com/sites/vibrant-aryabhata-d5826a/deploys)
 
 Welcome! This is the source code for my personal website at [patchan.dev](https://patchan.dev).
 
