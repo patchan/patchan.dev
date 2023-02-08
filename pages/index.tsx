@@ -68,6 +68,13 @@ const IndexPage = () => {
           <Job
             company='Amazon Web Services (AWS)'
             link='https://aws.amazon.com/sqs/'
+            title='Software Development Engineer'
+            dates={{ start: 'July 2022', end: 'Present'}}
+            tech={['Kotlin', 'Java', 'Spring']}
+          />
+          <Job
+            company='Amazon Web Services (AWS)'
+            link='https://aws.amazon.com/sqs/'
             title='Software Development Engineer Intern'
             dates={{ start: 'May 2021', end: 'Aug 2021'}}
             tech={['Kotlin', 'Java', 'Spring']}
