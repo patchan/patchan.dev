@@ -6,5 +6,5 @@
 
 [build.environment]
   NODE_VERSION = "22.2.0"
-  YARN_VERSION = "1.22.17"
+  YARN_VERSION = "4.3.0"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
