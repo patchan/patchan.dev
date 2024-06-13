@@ -5,6 +5,6 @@
   command = "yarn build"
 
 [build.environment]
-  NODE_VERSION = "17.4.0"
+  NODE_VERSION = "22.2.0"
   YARN_VERSION = "1.22.17"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
