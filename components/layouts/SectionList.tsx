@@ -19,7 +19,7 @@ const SectionList: React.FC<SectionListProps> = ({ children, id, heading }) => {
           display='block'
           minW={{ base: '210px', sm: '210px', md: '230px' }}
           h='100%'
-          align='left'
+          alignItems='left'
           px={{ base: 2, sm: 0 }}
           py={5}
         >
