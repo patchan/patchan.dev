@@ -37,4 +37,5 @@ yarn-error.log*
 .vscode
 
 # yarn
-/.yarn/
+.yarn/*
+!.yarn/releases/
