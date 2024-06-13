@@ -24,7 +24,7 @@ const NavDrawer: React.FC<NavDrawerProps> = ({ isOpen, onClose }) => {
         <DrawerContent backgroundColor={background}>
           <DrawerHeader p={0}>
             <DrawerBody p={4}>
-              <Box align='right'>
+              <Box alignItems='right'>
                 <IconButton
                   aria-label='Close Menu'
                   colorScheme='purple'

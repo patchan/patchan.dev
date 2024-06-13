@@ -1,5 +1,6 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
+import { Dict } from '@chakra-ui/utils';
 import { AppProps } from 'next/dist/shared/lib/router/router';
 
 const LIGHT_BOX_SHADOW = '0px 1px 2px rgb(221 221 229 / 0.9), 0px 2px 4px rgb(221 221 229 / 0.9), 0px 4px 8px rgb(221 221 229 / 0.9), 0px 8px 16px rgb(221 221 229 / 0.5)';
@@ -31,7 +32,7 @@ const theme = extendTheme({
     boxDark: DARK_BOX_SHADOW,
   },
   styles: {
-    global: (props) => ({
+    global: (props: Dict) => ({
       'html, body': {
         bg: mode('white', '#171717')(props),
         color: mode('#111', '#fff')(props),
