@@ -8,7 +8,7 @@ The site is designed by me with accessibility at its core. Read more about impro
 
 ### Technologies Used:
 * [TypeScript](https://www.typescriptlang.org/)
-* [Next.js](https://nextjs.org/) for speedy, easy to build webpages bundled with many amazing optimizations
+* [Next.js](https://nextjs.org/) for speedy, easy to build webpages bundled with many optimizations
 * [Chakra-UI](https://chakra-ui.com/) for highly customizable and accessibility minded React components
-* [Netlify](https://www.netlify.com) for continuous deployment
+* [Netlify](https://www.netlify.com) for continuous deployment integrated with Next.js
 * Icons from [Feather](https://feathericons.com/)
