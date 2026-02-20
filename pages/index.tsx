@@ -1,6 +1,5 @@
 import { Box, Text } from '@chakra-ui/react';
 import Head from 'next/head';
-import React from 'react';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import ContactIcon from '../components/ContactIcon';
 import Footer from '../components/Footer';

@@ -39,3 +39,5 @@ yarn-error.log*
 # yarn
 .yarn/*
 !.yarn/releases/
+
+next-env.d.ts
