@@ -4,7 +4,6 @@ import { FiMenu } from 'react-icons/fi';
 import { useWindowSize } from '../hooks/useWindowSize';
 import NavLink from './NavLink';
 import LogoLink from './LogoLink';
-import ResumeLink from './ResumeLink';
 import NavDrawer from './NavDrawer';
 import DarkModeToggle from '../DarkModeToggle';
 
@@ -58,7 +57,6 @@ const NavBar: React.FC<NavBarProps> = () => {
             <Stack as='nav' align='center' direction='row' spacing={3}>
               <NavItems />
             </Stack>
-            <ResumeLink />
             <DarkModeToggle />
           </Stack>
         :
